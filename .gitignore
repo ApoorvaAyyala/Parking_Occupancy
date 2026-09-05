@@ -1,0 +1,27 @@
+# VS Code
+.vscode/
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+.env.*
+
+# Local test videos
+datasets/test_videos/
+
+# Generated experiment results
+experiments/results/
+benchmarks/results/
