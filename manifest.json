@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Vehicle Vision",
+  "version": "0.1.0",
+  "description": "Browser-based vehicle detection, traffic analysis, and parking occupancy analysis.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": []
+}
+
