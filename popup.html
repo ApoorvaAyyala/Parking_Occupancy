@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Vehicle Vision</title>
+
+    <link
+        rel="stylesheet"
+        href="popup.css"
+    >
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div class="logo-area">
+                <div class="logo">V</div>
+
+                <div>
+                    <h1>Vehicle Vision</h1>
+
+                    <p>
+                        Browser-Based Traffic & Parking Analysis
+                    </p>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- Video Input -->
+        <section class="card">
+
+            <h2>Video Input</h2>
+
+            <p class="section-description">
+                Select a local video for analysis.
+            </p>
+
+            <label
+                for="videoInput"
+                class="upload-button"
+            >
+                Select Video
+            </label>
+
+            <input
+                type="file"
+                id="videoInput"
+                accept="video/*"
+            >
+
+            <p id="fileName" class="file-name">
+                No video selected
+            </p>
+
+        </section>
+
+
+        <!-- Analysis Mode -->
+        <section class="card">
+
+            <h2>Analysis Mode</h2>
+
+            <p class="section-description">
+                Choose the type of analysis to perform.
+            </p>
+
+            <div class="mode-buttons">
+
+                <button
+                    id="trafficMode"
+                    class="mode-button active"
+                    type="button"
+                >
+                    Traffic Analysis
+                </button>
+
+                <button
+                    id="parkingMode"
+                    class="mode-button"
+                    type="button"
+                >
+                    Parking Analysis
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Video Preview -->
+        <section class="card">
+
+            <h2>Video Preview</h2>
+
+            <div class="video-container">
+
+                <video
+                    id="videoPlayer"
+                    controls
+                ></video>
+
+                <canvas
+                    id="videoCanvas"
+                ></canvas>
+
+                <div
+                    id="videoPlaceholder"
+                    class="video-placeholder"
+                >
+                    <span>Video preview will appear here</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Results -->
+        <section class="card">
+
+            <h2>Results</h2>
+
+            <div class="results-grid">
+
+                <div class="result-item">
+                    <span class="result-label">
+                        Vehicles
+                    </span>
+
+                    <span
+                        id="vehicleCount"
+                        class="result-value"
+                    >
+                        —
+                    </span>
+                </div>
+
+
+                <div class="result-item">
+                    <span class="result-label">
+                        FPS
+                    </span>
+
+                    <span
+                        id="fpsValue"
+                        class="result-value"
+                    >
+                        —
+                    </span>
+                </div>
+
+
+                <div class="result-item">
+                    <span class="result-label">
+                        Occupancy
+                    </span>
+
+                    <span
+                        id="occupancyValue"
+                        class="result-value"
+                    >
+                        —
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Status -->
+        <section class="status-card">
+
+            <span class="status-indicator"></span>
+
+            <span id="status">
+                Waiting for video...
+            </span>
+
+        </section>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="app/video.js"></script>
+    <script src="app/canvas.js"></script>
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
