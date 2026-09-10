@@ -133,6 +133,26 @@ const CanvasManager = {
         );
 
         this.context.stroke();
+
+    // Research watermark
+
+        this.context.save();
+
+        this.context.font = "bold 24px Arial";
+
+        this.context.fillStyle = "rgba(255, 255, 255, 0.75)";
+
+        this.context.textAlign = "right";
+
+        this.context.textBaseline = "bottom";
+
+        this.context.fillText(
+            "Apoorva Ayyalasomayajula • Vehicle Vision",
+            this.canvas.width - 25,
+            this.canvas.height - 20
+        );
+
+        this.context.restore();
     },
 
     startRendering(videoElement) {
